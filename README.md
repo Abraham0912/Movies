@@ -17,6 +17,8 @@ npm install || yarn install
  ```bash
 npm run start || np start
 ```
+## View example:
+aqui una captura de  alguna vista :D
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
