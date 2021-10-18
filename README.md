@@ -1,19 +1,23 @@
-# Getting Started with Create React App
-App de peliculas que consume el API: 
+# App de peliculas que consume el API:
 Además contiene un ejemploComponent que explica the destructuring :D 
 
-Consider:
+## Consider:
 React version: 
 npm version: 
 
-Steps:
-1.- git clone urlRespositore
-2.-npm install || yarn install
-3.-execute the folow comand: npm run start || np start
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Steps:
+1.- 
+```bash
+git clone https://github.com/Abraham0912/Movies.git
+```
+2.- 
+```bash
+npm install || yarn install
+```
+3.-execute the folow comand:
+ ```bash
+npm run start || np start
+```
 
 ## Available Scripts
 
