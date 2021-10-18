@@ -15,3 +15,7 @@
       height: auto;
     }
   }
+
+  .movieCard:hover{
+    opacity: .5;
+  }
