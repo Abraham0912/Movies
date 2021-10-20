@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import movie from "./movie.json";
+import { useParams } from "react-router";
 //import movies from "../components/movies.json";
 import styles from "./MoviesDetails.module.css"
 
 export const MoviesDetails = () => {
     const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+
+    const { id } = useParams()
+    console.log(id)
+
+    //useEffect()
     return (
         <div className={styles.detailsContainer}>
             {/* La siguiente linea es una opcion para poner mas de un className 
