@@ -1,5 +1,6 @@
 # App de peliculas que consume el API:
-Además contiene un ejemploComponent que explica the destructuring :D 
+
+This is a new movie catalog app Además contiene un ejemploComponent que explica the destructuring :D 
 
 ## Consider:
 React version and npm version
