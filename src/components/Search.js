@@ -4,13 +4,16 @@ import { FaSearch } from "react-icons/fa";
 import { useHistory } from 'react-router';
 
 export const Search = () => {
-    const [searchText,setSearchText] = useState("Hola cara de bola")
+
+    const [searchText,setSearchText] = useState("")
+
     const history = useHistory();
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         history.push("/?search=" + searchText);
-        alert(searchText);
     }
+
     return (
         <form className={styles.searchContainer} onSubmit={handleSubmit}>
             <div className={styles.searchBox}>
