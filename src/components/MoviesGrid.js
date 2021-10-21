@@ -5,6 +5,8 @@ import { MovieCard } from "./MovieCard";
 import { useEffect, useState } from "react";
 import { get } from "../utils/httpClient";
 import { Spinner } from "./Spinner";
+import { useQuery } from "../my_hoocks/useQuery";
+
 
 export function MoviesGrid() {
   const [movies, setMovies]=useState([]);
@@ -14,16 +16,19 @@ export function MoviesGrid() {
 
   const [loading,setLoading] = useState(true);
 
+  const query = useQuery();
+  const search = query.get("search")
+
   useEffect(() => {
     setLoading(true);
-    setTimeout(function(){
-      get("/discover/movie").then((data) => {
+    const searchUrl = search
+      ? "/search/movie?query=" + search
+      : "/discover/movie";
+    get(searchUrl).then((data) => {
       setMovies(data.results);
       setLoading(false);
-      });
-    },200)
-    
-  }, []);
+    });
+  }, [search]);
 
   if(loading){
     return <Spinner/>
