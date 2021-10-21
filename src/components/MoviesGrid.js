@@ -21,9 +21,6 @@ export function MoviesGrid({search}) {
 
   const [hasMore,setHasMore] = useState(true);
 
-  // const query = useQuery();
-  // const search = query.get("search")
-
   useEffect(() => {
     setLoading(true);
     const searchUrl = search
@@ -37,15 +34,11 @@ export function MoviesGrid({search}) {
     });
   }, [search,page]);
 
-  // if(loading){
-  //   return <Spinner/>
-  // }
   return (
     <InfiniteScroll
      dataLength={movies.length}
      hasMore={hasMore}
      next={()=>setPage((prevPage)=>prevPage +1)}//Cambiar el estado a aprtir de un estado anterior
-     //next={()=>alert("SE VA CARGAR LA SIGUIENTE PAGINA WARING")}
      loader={<Spinner/>}
     >
     <ul className={styles.moviesGrid}>
