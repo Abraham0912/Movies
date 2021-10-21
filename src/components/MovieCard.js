@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./MovieCard.module.css";
-import imageNotFound from "../404_amarillo.jpg"
 import { getMovieImg } from "../utils/getMovieImg";
 
 export function MovieCard({ movie }) {
