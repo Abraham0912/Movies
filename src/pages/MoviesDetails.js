@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-//import movie from "./movie.json";
 import { useParams } from "react-router";
 import { Spinner } from '../components/Spinner';
-//import movies from "../components/movies.json";
 import { get } from '../utils/httpClient';
 import styles from "./MoviesDetails.module.css"
+import { getMovieImg } from "../utils/getMovieImg";
 
 export const MoviesDetails = () => {
     const { id } = useParams()
@@ -32,7 +31,8 @@ export const MoviesDetails = () => {
       return null;
     }
 
-      const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+      //const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+      const imageUrl = getMovieImg(movie.poster_path, 300);
       const imageUrlBack = "https://image.tmdb.org/t/p/w500" + movie.backdrop_path
     return (
         <div className={styles.detailsContainer}>
