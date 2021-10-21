@@ -35,7 +35,7 @@ export function MoviesGrid({search}) {
       setHasMore(data.page < data.total_pages)
       setLoading(false);
     });
-  }, [search]);
+  }, [search,page]);
 
   // if(loading){
   //   return <Spinner/>
