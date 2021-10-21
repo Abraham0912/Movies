@@ -25,9 +25,7 @@ export const Search = () => {
                 }} 
                 className={styles.searchInput} placeholder="Buscar..." 
                 type="text" />
-                <button className={styles.searchButton} type="submit">
-                    <FaSearch size={20}/>
-                </button>
+                    <FaSearch className={styles.searchButton} color="black" size={20}/>
             </div>    
         </form>
     )
