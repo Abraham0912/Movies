@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from "./Search.module.css"
 import { FaSearch } from "react-icons/fa";
 import { useHistory } from 'react-router';
+import { useQuery } from '../my_hoocks/useQuery';
 
 export const Search = () => {
+    const query = useQuery();
+    const search = query.get("search")
 
     const [searchText,setSearchText] = useState("")
 
     const history = useHistory();
+
+    useEffect(()=>{
+        setSearchText(search||"")
+    },[search]);
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -21,7 +28,6 @@ export const Search = () => {
                 value={searchText}
                 onChange={(e)=>{
                     setSearchText(e.target.value)
-                    console.log(e.target.value)
                 }} 
                 className={styles.searchInput} placeholder="Buscar..." 
                 type="text" />
