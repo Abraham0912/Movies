@@ -11,7 +11,7 @@ export const Search = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        history.push("/?search=" + searchText);
+        history.push("/?search=" + searchText);//Esto asigna x valor en la url
     }
 
     return (
