@@ -27,7 +27,9 @@ export const Search = () => {
                 <input
                 value={searchText}
                 onChange={(e)=>{
+                    const value = e.target.value;
                     setSearchText(e.target.value)
+                    history.push("/?search=" + value);
                 }} 
                 className={styles.searchInput} placeholder="Buscar..." 
                 type="text" />
