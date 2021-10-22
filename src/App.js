@@ -9,6 +9,7 @@ import {
 import { Destructuring } from "./destructuring/Destructuring";
 import { MoviesDetails } from "./pages/MoviesDetails";
 import { LandinPages } from "./pages/LandinPages";
+import { NotFound } from "./pages/NotFound";
 
 export function App() {
   return (
@@ -37,8 +38,7 @@ export function App() {
             <MoviesDetails />
           </Route>
           <Route path="">
-            <h1>404 NOT FOUND PAGE</h1>
-            <img width={600} src="404.jpg" alt="404_img" />
+            <NotFound/>
           </Route>
       </Switch>
       </main>
