@@ -27,13 +27,8 @@ export const MoviesDetails = () => {
         return <Spinner/>
     }
 
-    if (!movie) {
-      return null;
-    }
-
-      //const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
       const imageUrl = getMovieImg(movie.poster_path, 300);
-      const imageUrlBack = "https://image.tmdb.org/t/p/w500" + movie.backdrop_path
+      //const imageUrlBack = "https://image.tmdb.org/t/p/w500" + movie.backdrop_path
     return (
         <div className={styles.detailsContainer}>
             {/* La siguiente linea es una opcion para poner mas de un className 
