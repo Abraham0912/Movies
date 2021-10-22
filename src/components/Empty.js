@@ -1,9 +1,9 @@
-import React from 'react'
+import styles from "./Empty.module.css"
 
 export const Empty = () => {
     return (
-        <div>
-            No se encontro nada 
+        <div className={styles.empty}>
+            No results
         </div>
     )
 }
