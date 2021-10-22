@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import styles from "./Search.module.css"
 import { FaSearch } from "react-icons/fa";
 import { useHistory } from 'react-router';
@@ -12,20 +11,24 @@ export const Search = () => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-    }
+    };
 
     return (
         <form className={styles.searchContainer} onSubmit={handleSubmit}>
             <div className={styles.searchBox}>
                 <input
-                value={search}
+                className={styles.searchInput}
+                type="text"
+                value={search ?? ""}
+                autoFocus
+                placeholder="Search..."
+                aria-label="Search Movies"
                 onChange={(e)=>{
                     const value = e.target.value;
                     history.push("/?search=" + value);//Esto asigna x valor en la url
-                }} 
-                className={styles.searchInput} placeholder="Buscar..." 
-                type="text" />
-                    <FaSearch className={styles.searchButton} color="black" size={20}/>
+                }}
+                />
+                <FaSearch className={styles.searchButton} color="black" size={20}/>
             </div>    
         </form>
     )
