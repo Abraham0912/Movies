@@ -8,15 +8,13 @@ import {
 //Import components
 import { Destructuring } from "./destructuring/Destructuring";
 import { MoviesDetails } from "./pages/MoviesDetails";
-import { MoviesGrid } from "./components/MoviesGrid";
 import { LandinPages } from "./pages/LandinPages";
 
 export function App() {
   return (
-      <div>
-        <Router>
+    <Router>
       <header>
-      <Link to="/"><h1 className={styles.title}>Movies</h1></Link>
+        <Link to="/"><h1 className={styles.title}>Movies</h1></Link>
         <br />
         <Link to="/destructuring">Destructuracion</Link>
         <br />
@@ -27,7 +25,6 @@ export function App() {
         <Link to="/ruta_desconocida">Componente 404</Link>
       </header>
       <main>
-      
       <Switch>
           <Route path="/destructuring">
             <Destructuring title="Soy el titulo" content="soy contenido see!"/>
@@ -45,8 +42,6 @@ export function App() {
           </Route>
       </Switch>
       </main>
-      </Router>
-      
-    </div>
+    </Router>
   );
 }
